@@ -3,11 +3,8 @@
 
 // ROUTE DES BOOKS
 // PATTERN : /?books
-// CTRL : booksController
-// ACTION : indexAction
 if (isset($_GET['books'])) {
-    include '../app/controllers/booksController.php';
-    \App\Controllers\BooksController\indexAction($connexion);
+    include '../app/routers/books.php';
 }
 
 // ROUTE DES AUTHORS
