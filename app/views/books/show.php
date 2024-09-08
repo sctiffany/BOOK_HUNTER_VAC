@@ -11,10 +11,10 @@
             <p class="text-gray-300 mb-4">
                 Par
                 <a
-                    href="author.html"
+                    href="?"
                     class="hover:text-red-500 underline font-medium"><?php echo $book['firstname'] ?> <?php echo $book['lastname'] ?></a>
             </p>
-            <p class="text-gray-300 mb-4">Sortie le 01 janvier 1942</p>
+            <p class="text-gray-300 mb-4">Sortie le <?php echo $book['publicated_at'] ?></p>
             <p class="text-gray-300 mb-4">Genre: Roman</p>
             <div class="flex items-center mb-4">
                 <span class="text-yellow-500 mr-1">

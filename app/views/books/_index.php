@@ -8,7 +8,7 @@
             </span>
             <img
                 class="w-full h-48 object-cover"
-                src="<?php echo $book['cover']; ?>"
+                src="https://picsum.photos/480/300?random=<?php echo $book['id']; ?>"
                 alt="Movie Cover" />
             <div class="p-4">
                 <div class="pb-4">
@@ -35,7 +35,7 @@
                 </p>
 
                 <a
-                    href="?books=show&id=<?php echo $book['bookID'] ?>"
+                    href="books/<?php echo $book['bookID']; ?>/<?php echo \Core\Helpers\slugify($book['title']) ?>"
                     class="inline-block mt-4 bg-red-500 hover:bg-red-800 rounded-full px-4 py-2 text-white">
                     More details
                 </a>

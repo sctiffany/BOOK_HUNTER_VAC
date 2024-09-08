@@ -9,11 +9,14 @@ if (isset($_GET['books'])) {
 
 // ROUTE DES AUTHORS
 // PATTERN : /?authors
-// CTRL : authorsController
-// ACTION : indexAction
 elseif (isset($_GET['authors'])) {
-    include '../app/controllers/authorsController.php';
-    \App\Controllers\AuthorsController\indexAction($connexion);
+    include '../app/routers/authors.php';
+}
+
+// ROUTE DES USERS
+// PATTERN : /?users
+elseif (isset($_GET['users'])) {
+    include '../app/routers/users.php';
 }
 
 // ROUTE PAR DEFAUT

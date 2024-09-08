@@ -28,3 +28,16 @@ function findOneById(PDO $connexion, int $id): array
     $rs->execute();
     return $rs->fetch(PDO::FETCH_ASSOC);
 }
+
+function findAllByAuthorId(PDO $connexion, int $id): array
+{
+    $sql = "SELECT *, b.id AS bookID, a.id AS authorID
+            FROM books b
+            INNER JOIN authors a ON b.author_id = a.id
+            WHERE b.author_id = :id
+            ORDER BY b.title ASC;";
+    $rs = $connexion->prepare($sql);
+    $rs->bindValue(':id', $id, PDO::PARAM_INT);
+    $rs->execute();
+    return $rs->fetchAll(PDO::FETCH_ASSOC);
+}
