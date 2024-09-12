@@ -23,9 +23,10 @@ function verificationAction(PDO $connexion, array $data)
 
     if ($user) {
         // on va vers le dashboard du backoffice
-        header('Location: http://www.google.be');
+        $_SESSION['user'] = $user;
+        header('Location: ' . BASE_ADMIN_URL);
     } else {
         // on va vers users/login
-        header('Location:' . BASE_HREF . 'users/login');
+        header('Location:' . BASE_PUBLIC_URL . 'users/login');
     }
 }

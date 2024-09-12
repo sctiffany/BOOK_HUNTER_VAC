@@ -11,5 +11,7 @@ define('DB_NAME', 'book_hunter_2024');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 
-// Autre paramètre
-define('BASE_HREF', 'http://localhost/SCRIPTS%20SERVEUR/BOOK_HUNTER_VAC/public/');
+// Autres paramètres
+define('PUBLIC_FOLDER', 'frontoffice');
+define('ADMIN_FOLDER', 'backoffice');
+define('DISPATCHER_NAME', 'index');
