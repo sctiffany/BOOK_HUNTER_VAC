@@ -23,7 +23,7 @@
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header">GESTION DES CATÉGORIES</li>
                         <li><a href="?categories">Liste des catégories</a></li>
-                        <li><a href="#">Ajouter une catégorie</a></li>
+                        <li><a href="categories/add/form">Ajouter une catégorie</a></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header">GESTION DES TAGS</li>
                         <li><a href="?tags">Liste des tags</a></li>

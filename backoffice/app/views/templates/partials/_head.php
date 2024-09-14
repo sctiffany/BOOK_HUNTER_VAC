@@ -7,6 +7,7 @@
 <link rel="icon" href="../../favicon.ico" />
 
 <title>BACKOFFICE - <?php echo $title ?></title>
+<base href="<?php echo BASE_ADMIN_URL ?>">
 
 <!-- Bootstrap core CSS -->
 <!-- Font Awesome -->
