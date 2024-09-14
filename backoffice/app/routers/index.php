@@ -1,16 +1,12 @@
 <?php
 if (isset($_GET['books'])) {
-    include_once '../app/controllers/booksController.php';
-    App\Controllers\BooksController\indexAction($connexion);
+    include '../app/routers/books.php';
 } elseif (isset($_GET['categories'])) {
-    include_once '../app/controllers/categoriesController.php';
-    App\Controllers\CategoriesController\indexAction($connexion);
+    include '../app/routers/categories.php';
 } elseif (isset($_GET['tags'])) {
-    include_once '../app/controllers/tagsController.php';
-    App\Controllers\TagsController\indexAction($connexion);
+    include '../app/routers/tags.php';
 } elseif (isset($_GET['users'])) {
-    include_once '../app/controllers/usersController.php';
-    App\Controllers\UsersController\indexAction($connexion);
+    include '../app/routers/users.php';
 }
 
 

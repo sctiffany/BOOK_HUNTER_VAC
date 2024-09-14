@@ -17,9 +17,9 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                         aria-expanded="false">GESTION <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li class="dropdown-header">GESTION DES POSTS</li>
-                        <li><a href="?books">Liste des posts</a></li>
-                        <li><a href="#">Ajouter un post</a></li>
+                        <li class="dropdown-header">GESTION DES BOOKS</li>
+                        <li><a href="?books">Liste des books</a></li>
+                        <li><a href="#">Ajouter un book</a></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header">GESTION DES CATÉGORIES</li>
                         <li><a href="?categories">Liste des catégories</a></li>
