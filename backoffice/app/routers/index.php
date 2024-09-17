@@ -13,5 +13,5 @@ if (isset($_GET['books'])) {
 // Route par défaut
 else {
     include_once '../app/controllers/pagesController.php';
-    App\Controllers\PagesController\homeAction($connexion);
+    App\Controllers\PagesController\dashboardAction();
 }

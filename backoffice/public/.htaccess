@@ -5,11 +5,36 @@ RewriteEngine on
 # ROUTES
 #--------------------------------------------------
 
+# ROUTE DES BOOKS
+
+# LISTE DES BOOKS
+# PATTERN : books
+# URL : index.php?books=index
+RewriteRule ^books$ index.php?books=index [L]
+
+# AJOUT D'UN BOOK : FORMULAIRE
+# PATTERN : books/add/form
+# URL : index.php?books=addForm
+RewriteRule ^books\/add\/form$ index.php?books=addForm [L]
+
+# AJOUT D'UN BOOK : INSERT
+# PATTERN : books/add/insert
+# URL : index.php?books=add
+RewriteRule ^books\/add\/insert$ index.php?books=add [L]
+
+# SUPPRESSION D'UN BOOK : DELETE
+# PATTERN : books/delete/x
+# URL : index.php?books=delete&id=x
+RewriteRule ^books\/delete\/([1-9][0-9]*)$ index.php?books=delete&id=$1 [L]
+
+# --------------------------------------------------------------------------------
+
 # ROUTE DES CATEGORIES
+
 # LISTE DES CATEGORIES
-# PATTERN : ?categories
+# PATTERN : categories
 # URL : index.php?categories=index
-# RewriteRule ^categories$ index.php?categories [L]
+RewriteRule ^categories$ index.php?categories=index [L]
 
 # AJOUT DES CATEGORIES : FORMULAIRE
 # PATTERN : categories/add/form
@@ -25,6 +50,34 @@ RewriteRule ^categories\/add\/insert$ index.php?categories=add [L]
 # PATTERN : categories/delete/x
 # URL : index.php?categories=delete&id=x
 RewriteRule ^categories\/delete\/([1-9][0-9]*)$ index.php?categories=delete&id=$1 [L]
+
+# MODIFICATION D'UNE CATEGORIE : FORMULAIRE
+# PATTERN : categories/edit/form/x
+# URL : index.php?categories=editForm&id=x
+RewriteRule ^categories\/edit\/form\/([1-9][0-9]*)$ index.php?categories=editForm&id=$1 [L]
+
+# MODIFICATION D'UNE CATEGORIE : UPDATE
+# PATTERN : categories/edit/x
+# URL : index.php?categories=edit&id=x
+RewriteRule ^categories\/edit\/([1-9][0-9]*)$ index.php?categories=edit&id=$1 [L]
+
+# ---------------------------------------------------------------------------------------------
+
+# ROUTE DES TAGS
+
+# LISTE DES TAGS
+# PATTERN : tags
+# URL : index.php?tags=index
+RewriteRule ^tags$ index.php?tags=index [L]
+
+# ---------------------------------------------------------------------------------------------
+
+# ROUTE DES USERS
+
+# LISTE DES USERS
+# PATTERN : users
+# URL : index.php?users=index
+RewriteRule ^users$ index.php?users=index [L]
 
 # --------------------------------------------------
 RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]

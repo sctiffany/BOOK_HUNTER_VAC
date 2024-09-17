@@ -12,12 +12,12 @@ RewriteEngine on
 # 1. Dans le href, je mets le pattern
 # 2. Dans le .htaccess, je transforme le pattern en URL
 # 3. Dans le router, je récupère l'URL comme d'hab
-RewriteRule ^books/([1-9][0-9]*)/[a-z\-]+$ index.php?books=show&id=$1 [L]
+RewriteRule ^books/([1-9][0-9]*)/[a-z0-9\-]+$ index.php?books=show&id=$1 [L]
 
 # AUTHORS.SHOW
 # PATTERN: /authors/{id}/{slug}
 # URL: index.php?authors=show&id=xxx
-RewriteRule ^authors/([1-9][0-9]*)/[a-z\-]+$ index.php?authors=show&id=$1 [L]
+RewriteRule ^authors/([1-9][0-9]*)/[a-z0-9\-]+$ index.php?authors=show&id=$1 [L]
 
 # USERS.LOGIN
 # PATTERN: /users/login

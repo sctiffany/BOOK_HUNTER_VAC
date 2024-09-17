@@ -38,5 +38,25 @@ function deleteAction(PDO $connexion, int $id)
     include_once '../app/models/categoriesModel.php';
     $return = \App\Models\CategoriesModel\delete($connexion, $id);
 
-    header('Location: ' . BASE_ADMIN_URL . '?categories');
+    header('Location: ' . BASE_ADMIN_URL . 'categories');
+}
+
+function editFormAction(PDO $connexion, int $id)
+{
+    include_once '../app/models/categoriesModel.php';
+    $category = \App\Models\CategoriesModel\findOneById($connexion, $id);
+
+    global $content, $title;
+    $title = "Modifier une catégorie";
+    ob_start();
+    include_once '../app/views/categories/editForm.php';
+    $content = ob_get_clean();
+}
+
+function editAction(PDO $connexion, array $data = null)
+{
+    include_once '../app/models/categoriesModel.php';
+    $return = \App\Models\CategoriesModel\update($connexion, $data);
+
+    header('Location: ' . BASE_ADMIN_URL . 'categories');
 }

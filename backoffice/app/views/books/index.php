@@ -17,14 +17,14 @@
         <tbody>
             <?php foreach ($books as $book): ?>
                 <tr>
-                    <td><?php echo $book['id'] ?></td>
+                    <td><?php echo $book['bookID'] ?></td>
                     <td><?php echo $book['firstname'] ?></td>
                     <td><?php echo $book['lastname'] ?></td>
                     <td><?php echo $book['title'] ?></td>
                     <td><?php echo $book['publicated_at'] ?></td>
                     <td>
-                        <button type="button" class="btn btn-primary">Modifier</button>
-                        <button type="button" class="btn btn-secondary">Supprimer</button>
+                        <a href="books/edit/form/<?php echo $book['bookID'] ?>" class="btn btn-primary edit">Modifier</a>
+                        <a href="books/delete/<?php echo $book['bookID'] ?>" class="btn btn-secondary delete">Supprimer</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

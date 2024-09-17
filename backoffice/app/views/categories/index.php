@@ -19,7 +19,7 @@
                     <td><?php echo $category['name'] ?></td>
                     <td><?php echo $category['created_at'] ?></td>
                     <td>
-                        <a href="categories/show/<?php echo $category['id'] ?>" class="btn btn-primary edit">Modifier</a>
+                        <a href="categories/edit/form/<?php echo $category['id'] ?>" class="btn btn-primary edit">Modifier</a>
                         <a href="categories/delete/<?php echo $category['id'] ?>" class="btn btn-secondary delete">Supprimer</a>
                     </td>
                 </tr>

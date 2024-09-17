@@ -18,19 +18,21 @@
                         aria-expanded="false">GESTION <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-header">GESTION DES BOOKS</li>
-                        <li><a href="?books">Liste des books</a></li>
-                        <li><a href="#">Ajouter un book</a></li>
+                        <li><a href="books">Liste des books</a></li>
+                        <li><a href="books/add/form">Ajouter un book</a></li>
                         <li role="separator" class="divider"></li>
+
                         <li class="dropdown-header">GESTION DES CATÉGORIES</li>
-                        <li><a href="?categories">Liste des catégories</a></li>
+                        <li><a href="categories">Liste des catégories</a></li>
                         <li><a href="categories/add/form">Ajouter une catégorie</a></li>
+
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header">GESTION DES TAGS</li>
-                        <li><a href="?tags">Liste des tags</a></li>
+                        <li><a href="tags">Liste des tags</a></li>
                         <li><a href="#">Ajouter un tag</a></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header">GESTION DES UTILISATEURS</li>
-                        <li><a href="?users">Liste des utilisateurs</a></li>
+                        <li><a href="users">Liste des utilisateurs</a></li>
                         <li><a href="#">Ajouter un utilisateur</a></li>
                     </ul>
                 </li>

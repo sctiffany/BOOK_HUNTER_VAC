@@ -2,13 +2,12 @@
 
 namespace App\Controllers\PagesController;
 
-use \PDO;
 
-function homeAction(PDO $connexion)
+function dashboardAction()
 {
     global $content, $title;
     $title = "Homepage du backoffice";
     ob_start();
-    include_once '../app/views/pages/home.php';
+    include_once '../app/views/pages/dashboard.php';
     $content = ob_get_clean();
 }
